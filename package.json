@@ -1,0 +1,36 @@
+{
+  "name": "pondus",
+  "version": "1.0.0",
+  "description": "weight control app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://uralozden@github.com/uralozden/pondus.git"
+  },
+  "keywords": [
+    "node",
+    "react-native",
+    "mobile",
+    "weight"
+  ],
+  "author": "uralozden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uralozden/pondus/issues"
+  },
+  "homepage": "https://github.com/uralozden/pondus#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.12.5"
+  }
+}
