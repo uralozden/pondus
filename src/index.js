@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import config from './config.json';
 import User from './User.js';
+import jwt from 'jsonwebtoken';
 
 mongoose.connect('mongodb://'+config.dbUser+':'+config.dbPassowrd+'@ds135916.mlab.com:35916/'+config.dbName, { useMongoClient: true });
 mongoose.Promise = global.Promise;
@@ -14,7 +15,13 @@ app.use(bodyParser.json())
 
 
 app.get('/',  (req,res) => {
-    User.find({}, {_id:0,socialNetwork:0}).then( (data) => {
+
+    User.find({}, {socialNetwork:0}).then( (data) => {
+        const token =  jwt.sign({userId: data._id},config.jwtToken);
+        const usertoken = {
+            token: token
+        }
+        data.push(usertoken);
         res.send(data);
     });
 });
