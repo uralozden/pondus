@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import config from './config.json';
 import User from './User.js';
 import jwt from 'jsonwebtoken';
+import AuthRouter from './routes';
 
 mongoose.connect('mongodb://'+config.dbUser+':'+config.dbPassowrd+'@ds135916.mlab.com:35916/'+config.dbName, { useMongoClient: true });
 mongoose.Promise = global.Promise;
@@ -13,9 +14,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+AuthRouter(app);
+
 
 app.get('/',  (req,res) => {
-
     User.find({}, {socialNetwork:0}).then( (data) => {
         const token =  jwt.sign({userId: data._id},config.jwtToken);
         const usertoken = {
