@@ -1,6 +1,6 @@
 #Custom Files
 
-src/config.json
+src/config.js
 
 # Logs
 logs
@@ -61,3 +61,4 @@ typings/
 # dotenv environment variables file
 .env
 
+src/config.js
