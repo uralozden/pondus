@@ -3,7 +3,6 @@ import config from 'config';
 import User from 'User.js';
 import jwt from 'jsonwebtoken';
 
-
 const route = () => {
     const router = new express.Router();
     router.route('/list').get((req,res) => {
@@ -15,7 +14,6 @@ const route = () => {
             data.push(usertoken);
             res.send(data);
         });
-
     });
 
     router.route('/add').post((req,res) => {
