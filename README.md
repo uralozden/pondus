@@ -4,7 +4,7 @@ Pondus is a weight controll mobile app. This repo has "Pondus" api source code.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. update 29092023
 
 
 ### Installing
