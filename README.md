@@ -1,6 +1,5 @@
 # PONDUS API 
- !
-wtf 
+
 Pondus is a weight controll mobile app. This repo has "Pondus" api source code. !! 1
 
 ## Getting Started
